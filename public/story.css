@@ -1,0 +1,53 @@
+body, html {
+  
+    height: 100%;
+  }
+  
+  .bg {
+  
+    background-image: url("/Images/very-light.jpg");
+
+    /* background-color: aqua; */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .anyClass {
+    height:100vh;
+    overflow-y: scroll;
+  }
+  
+  .post-text {
+  
+    text-align: center;
+    margin: 0 auto;
+    width: 70vw;
+    position: relative;
+    word-break: break-all;
+    /* border: 1PX SOLID BLACK; */
+  
+  }
+  
+  .post-heading {
+  
+    margin-top: 30px;
+    /* font-family: 'Fruktur', cursive; */
+    /* font-family: 'News Cycle', sans-serif; */
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+  }
+
+
+  .nav-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+  }

@@ -1,0 +1,193 @@
+html {
+  scroll-behavior: smooth;
+}
+.nav-item {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.hidden {
+  /* visibility: hidden; */
+  margin-left: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+.container-fluid {
+  float: right;
+}
+
+html {
+  /* background: url("https://imgs.search.brave.com/Sgk1HR3QbwnyrIeHpDwjO6vN0GibR00cbFa0IZVqcy8/rs:fit:631:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5n/T0VDZm5sMGt5ME5L/YW4yWGNYeVl3SGFG/ayZwaWQ9QXBp") no-repeat fixed; */
+  /* background-color: rgb(0, 0, 0, 0.9); */
+  /* -webkit-background-size: cover; */
+  /* -moz-background-size: cover; */
+  /* -o-background-size: cover; */
+  /* background-size: cover; */
+  height: 100%;
+  width: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+h1 {
+  text-align: center;
+  /* background-color: rgba(0,0,0,0.7); */
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.div {
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  background-color: rgba(0, 0, 0, 0);
+  background-color: french;
+  margin: 60px;
+  margin-top: 40px;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  /* border: #101820 solid 1px; */
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+ 
+  transition: 0.5s;
+}
+.div:hover {
+  transform: translate(0px, -10px);
+}
+
+div > div > img:hover {
+  opacity: 0.6;
+}
+
+.div img {
+  
+  width: 300px;
+  height: 300px;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: rgb(253, 224, 224);
+}
+
+.gallery {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  margin-top: 10%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.gallery img {
+  scroll-snap-align: center;
+}
+
+.wrapper {
+  margin-top: auto;
+}
+
+.navbar {
+  /* position:fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 120px; */
+  background-color: transparent;
+}
+
+
+.dropdown-menu-end {
+  top: 0;
+}
+
+/* VISH about us stuff */
+
+.desc {
+  margin-top: 8vw;
+  padding: 1vw;
+  background-color: rgb(253, 224, 224);
+}
+.descr {
+  float: right;
+  width: 60%;
+  margin-right: 5vw;
+
+  /* margin-bottom: 100px; */
+
+  /* padding: 5vw;
+  text-align: center;
+  background-color: rgb(253, 224, 224); */
+}
+.desc > p {
+  text-align: center;
+}
+.desc > img {
+  height: 35vh;
+  width: 25vw;
+}
+
+.abt{
+  padding: 5vw;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.btn{
+/* margin-right: 5vw; */
+  /* position: absolute; */
+  background-color: rgba(252, 177, 177, 0.747);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+
+}
+.regi{
+  padding: 5vw;
+  text-align: center;
+  background-color: rgb(253, 224, 224);
+}
+ 
+
+.btn1{
+/* margin-right: 5vw; */
+  /* position: absolute; */
+  background-color: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+
+}
+.btn:hover {
+
+
+  border: 1px solid black;
+}
+.foot{
+  background-color: rgb(252, 177, 177);
+}
+
+.footerimg{
+  height: 35vh;
+}
+
+.nav-link {
+
+  font-size: 1.4rem;
+  margin: 10px;
+  padding:8;
+}
+
+
+.transparent {
+
+  background-color: white;
+  border: none;
+}

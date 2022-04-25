@@ -1,0 +1,125 @@
+.container-fluid {
+
+    float: right;
+}
+
+html{
+    /* background: url("https://imgs.search.brave.com/Sgk1HR3QbwnyrIeHpDwjO6vN0GibR00cbFa0IZVqcy8/rs:fit:631:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5n/T0VDZm5sMGt5ME5L/YW4yWGNYeVl3SGFG/ayZwaWQ9QXBp") no-repeat fixed; */
+    /* background-color: rgb(0, 0, 0, 0.9); */
+    /* -webkit-background-size: cover; */
+    /* -moz-background-size: cover; */
+    /* -o-background-size: cover; */
+    /* background-size: cover; */
+    height: 100%;
+    width: 100%;
+}
+
+body {
+
+    /* background-image: url("space.jpg"); */
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+h1{
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+#i1{
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+#i2{
+    border: #101820 solid 1px;
+    border-radius: 45%;
+    width: 50px;
+    height: 45px;
+    float: right;
+}
+#i2:hover{
+    transform: scale(1.2);
+}
+#wrapper{
+    border-radius:10px;
+    height: 600px;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* background-color: rgb(255, 235, 205, 0.5); */
+}
+.div{
+    margin: 70px;
+    margin-top: 50px;
+    display: inline-block;
+    width: 300px;
+    height: 450px;
+    border: #101820 solid 1px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.2);
+}
+.div:hover{
+    transform: translate(0px, -10px);
+}
+
+div>div>img:hover{
+    opacity:0.6;
+}
+span{
+    position: absolute;
+    top:50%;
+    bottom:50%;
+    left:25%;
+    right:25%;
+    font-family: 'Hubballi', cursive;
+}
+
+span a{
+    color: #101820;
+    background-color: rgb(250, 235, 215, 0.7);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.div img{
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.gallery {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+
+}
+
+::-webkit-scrollbar {
+
+    width: 0px;
+}
+  
+.gallery img {
+    scroll-snap-align: center;
+}
+
+.wrapper {
+
+    margin-top: auto;
+}
+

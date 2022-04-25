@@ -1,0 +1,42 @@
+.row {
+
+    height: 60px;
+}
+
+.bad-email {
+
+    border: 3px solid red;
+}
+
+.good-email {
+
+    border: 3px solid green;
+}
+
+.btn {
+    background-color: rgba(255, 0, 0, 0.542);
+    color: black;
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .col-md-6 {
+
+    /* padding-left: 20px; */
+  }
+  
+
+  .nav-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+  }

@@ -1,0 +1,68 @@
+body {
+    /* padding-top: 13vh; */
+  
+    background-color: rgb(253, 224, 224);
+}
+
+.navbar {
+    background-color: rgb(253, 224, 224);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.nav-logo {
+    height: 4vw;
+}
+
+.quote {
+    margin-left: 38vw;
+    color: black;
+}
+
+.btn {
+    border-radius: 2vw;
+}
+
+.pfp {
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+}
+
+.user {
+    background-color: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 5vw;
+ 
+}
+
+.img1:hover {
+    transition: 0.5s;
+    transform: translate(0px, -5px);
+}
+
+.page-title {
+
+    z-index: 999;
+
+    margin-left: 34%;
+}
+
+
+.nav-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+  }

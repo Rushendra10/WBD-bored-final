@@ -1,0 +1,159 @@
+
+
+.bgdiv {
+   background: #e6bbb2;
+    }
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.card11 {
+    float: left;
+    margin-left: 175px;
+/* margin-right: 85px; */
+    /* background-image: url(pastelpink.jpg); */
+    background-color: rgb(253, 224, 224);
+    margin-bottom: 40px;
+    /* margin-top: 10px; */
+    padding-left: 5px;
+    transition: 0.5s;
+
+    /* margin-left: 280px; */
+}
+
+.card11:hover {
+    transform: translate(0px, -10px);
+}
+
+.nav-item {
+
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.hidden {
+
+    /* visibility: hidden; */
+    margin-left: 20px;
+}
+
+.feed-title {
+
+    font-size: 3rem;
+}
+
+.card-text {
+
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.btn {
+
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgba(247, 104, 104, 0.747);
+}
+
+.nav-link {
+    margin-bottom: 0;
+  }
+  .navbar{
+      background-color: #ffffff;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+  }
+
+  
+  .peachDiv{
+    background-color: rgb(253, 224, 224);
+    padding: 2vw;
+    display: flex;
+ 
+  }
+  .whiteDiv{
+    background-color: rgb(255, 255, 255);
+    padding: 2vw;
+    display: flex;
+ 
+  }
+ 
+
+
+.feed{
+      
+
+    width: 70vw;
+    /* margin-right: 5vw; */
+}
+.feed>p{
+    text-align: center;
+    flex: 100%;
+    margin-top: 4vw;
+    margin-left: 4vw;
+}
+.peachDiv>img{
+    object-fit:scale-down;
+    width:200px;
+    height:300px;
+   
+  }
+  .whiteDiv>img{
+    object-fit:scale-down;
+    width:200px;
+    height:300px;
+   
+  }
+  .wrapper {
+    margin-top: auto;
+  }
+  .foot{
+    background-color: rgb(252, 177, 177);
+  }
+  .footerimg{
+    height: 35vh;
+  }
+
+  .btn1 {
+  margin-left: 35vw;
+  flex: 100%;
+    background-color: rgba(255, 255, 255, 0.747);
+    /* box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2); */
+  
+  }
+  
+  .btn:hover {
+
+    border: 1px solid black;
+  }
+  .btn2 {
+    margin-left: 35vw;
+    flex: 100%;
+    background-color: rgb(253, 224, 224);
+    align-items: center;
+    }
+    
+    .btn:hover {
+  
+      border: 1px solid black;
+    }
+
+
+    .post-title {
+
+      font-size: 2rem;
+      margin-left: auto;
+    }
+
+    .post-content-brief {
+
+      margin-top: 10px;
+    }

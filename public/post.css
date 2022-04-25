@@ -1,0 +1,121 @@
+body {
+
+    background-color: rgb(253, 224, 224);
+    background-size: 100% 100vw;
+}
+
+p {
+    margin-top: 2em ;
+    margin-bottom: 2em ;
+}
+
+.page-title {
+
+    margin: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+
+    text-align: center;
+}
+
+.between-post-content {
+
+    border-top: 1px solid rgb(238, 95, 95);
+    margin: auto;
+    width: 50%;
+    
+}
+
+.container-md {
+
+    margin-top: 3vw;
+
+    padding: 2vw;
+   
+}
+
+.file {
+    opacity: 1;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #f76195, #ff8181);
+    /* background-image: url("/Images/very-light.jpg"); */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+
+    /* float: left; */
+}
+
+/* .form-select {
+
+    width: 30%;
+} */
+
+.contains-form {
+
+    background-color: rgb(253, 253, 253);
+    
+    border-radius: 10px;
+}
+
+.hidden {
+
+    visibility: hidden;
+}
+
+.form-select {
+
+    height: 3rem;
+}
+
+.form-control {
+
+    height: 3rem;
+}
+.btn{
+    background-color: rgb(252, 177, 177);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+
+}
+.btn:hover {
+
+
+    border: 1px solid black;
+}
+/* .col-6 {
+
+    
+} */
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+
+
+  .nav-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+  }
