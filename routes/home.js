@@ -19,13 +19,6 @@ router.get("/", async (req, res) =>{
 
         let user = req.session.loggeduser;
 
-        console.log("the one I need", user);
-
-        
-
-        // const folderPath = '/Images';
-
-        // console.log(fs.readdirSync(folderPath)); 
 
         let arr = []
 
