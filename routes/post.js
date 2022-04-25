@@ -70,26 +70,53 @@ router.get("/post", async (req, res) =>{
     // console.log(req.body.postimage);
 
     // console.log(req.file);
+
+    let newPost;
+
+    if (req.files.newcategorypic==undefined){
+
+        newPost = new Post({
+
+            postDate: Date.now(),
+    
+            postTitle: req.body.posttitle,
+        
+            postContent: req.body.postcontent,
+        
+            // postImg: req.files.filename,
+            postImg: req.files.postimage[0].filename,
+    
+            newcategoryname: req.body.newcategoryname,
+    
+            // newcategoryImg: req.files.newcategorypic[0].filename,
+    
+            postCategory: req.body.category,
+    
+        })
+
+    }
     
 
-    let newPost = new Post({
+    else {
+        newPost = new Post({
 
-        postDate: Date.now(),
-
-        postTitle: req.body.posttitle,
+            postDate: Date.now(),
     
-        postContent: req.body.postcontent,
+            postTitle: req.body.posttitle,
+        
+            postContent: req.body.postcontent,
+        
+            // postImg: req.files.filename,
+            postImg: req.files.postimage[0].filename,
     
-        // postImg: req.files.filename,
-        postImg: req.files.postimage[0].filename,
-
-        newcategoryname: req.body.newcategoryname,
-
-        newcategoryImg: req.files.newcategorypic[0].filename,
-
-        postCategory: req.body.category,
-
-    })
+            newcategoryname: req.body.newcategoryname,
+    
+            newcategoryImg: req.files.newcategorypic[0].filename,
+    
+            postCategory: req.body.category,
+    
+        })
+    }
 
     Post.savePost(newPost);
 

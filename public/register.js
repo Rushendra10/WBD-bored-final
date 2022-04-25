@@ -58,3 +58,24 @@ function validateConfirmPassword(){
     }
 }
 
+function validateUsername(){
+
+    let inp = document.querySelector(".username");
+
+    let bt = document.querySelector(".btn-success");
+
+    let pattern = /^([\w\-]{5})$/ 
+
+    if (!inp.value.match(pattern)){
+
+        alert("User should be of minimum 5 characters");
+
+        bt.disabled = true;
+    }
+
+    else {
+
+        bt.disabled = false;
+    }
+}
+
