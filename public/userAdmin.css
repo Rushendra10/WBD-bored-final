@@ -1,0 +1,11 @@
+.nav-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+
+    font-size: 1.4rem;
+    padding: 8;
+    margin: 10px;
+}

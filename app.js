@@ -25,6 +25,14 @@ const storyRoutes = require("./routes/story")
 
 const editRoutes = require("./routes/edit")
 
+const userAdminRoutes = require("./routes/userAdmin");
+
+const postAdminRoutes = require("./routes/postAdmin");
+
+const deletePost = require("./routes/deletePost");
+
+const deleteUser = require("./routes/deleteUser");
+
 const app = express();
 
 const db = require("./Database/connection");
@@ -76,6 +84,13 @@ app.use(storyRoutes);
 
 app.use(editRoutes);
 
+app.use(userAdminRoutes);
+
+app.use(postAdminRoutes);
+
+app.use(deletePost);
+
+app.use(deleteUser);
 
 
 // app.use(express.cookieParser());

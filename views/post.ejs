@@ -91,8 +91,9 @@
                             <option value="sports">Sports</option> -->
                             <% cats.forEach( cat => { %>
 
+                              <% if(cat!=""){ %> 
                               <option value="<%= cat %>"> <%= cat %> </option>
-
+                                <% } %> 
                             <% }) %> 
                             <!-- <option value="4">Memes</option> -->
 

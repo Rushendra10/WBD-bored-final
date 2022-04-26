@@ -19,22 +19,29 @@ router.get("/feed", async (req, res) =>{
         // res.sendFile(path.join(__dirname, '..', 'views', 'feed1.html'));
 
     }
+
+
+    console.log("haha");
 });
 
 
 router.post("/feed", async (req, res) => {
 
-    console.log(req.body);
+    console.log(req.body.category);
 
-    await Post.find({$or: [{postcategory: req.body.category}, {newcategoryname: req.body.category}]}, (err, docs) => {
-
+    await Post.find({$or: [{postCategory: req.body.category}, {newcategoryname: req.body.category}]}, (err, docs) => {
+        // await Post.find({newcategoryname: "Movies"}, {}, (err, docs) => {
         if (docs!=null){
 
-            console.log(docs.length);
+            // console.log(docs.length);
+
+            // console.log(docs[0]);
 
             res.render("feed1", {posts: docs, user: req.session.loggeduser});
         }
     }).clone().catch(function(err){ console.log(err)});
+
+    console.log("in post");
 
 });
 
