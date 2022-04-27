@@ -82,3 +82,4 @@ User.statics.fetchUserById = function (id, cb) {
 }
 
 module.exports = model('User', User);
+
