@@ -68,8 +68,6 @@ function validateUsername(){
 
     if (!inp.value.match(pattern)){
 
-        alert("User should be of minimum 5 characters");
-
         bt.disabled = true;
     }
 

@@ -8,48 +8,27 @@ const User = require("../Models/User");
 const session = require("express-session");
 const Post = require("../Models/Post");
 
-router.get("/", async (req, res) =>{
+const axios = require('axios');
 
-    if (req.session.loggeduser==undefined){
+const {getPost} = require('../controllers/postActions')
 
-        res.redirect("/login");
-    }
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     summary: This will get all the unique categories so that they can be displayed as cards
+ *     responses:
+ *       200:
+ *         description: The categories have been retrieved
+ *         content:
+ *           application/json:
+ *             schema:  
+ *               type: array
+ *               items:
+ *                 "categories": "movies"
+ * 
+ */
 
-    else {
-
-        let user = req.session.loggeduser;
-
-
-        let arr = []
-
-        await Post.find({postCategory: "other"}, (err, docs) => {
-
-            if (docs!=null){
-
-                for(let i=0; i<docs.length; i++){
-
-                    arr.push(docs[i]);
-                }
-
-                // console.log(docs.length);
-
-                // console.log(arr.length);
-        
-                res.render("index", {user: user, specialposts: arr});
-            }
-
-            else {
-                res.render("index", {user:user});
-            }
-
-            // console.log(docs[0]);
-        }).clone().catch(function(err){ console.log(err)});
-
-        // console.log(specialposts);
-
-        // res.render("index", {user:user});
-    }
-   
-});
+router.get("/", getPost);
 
 module.exports = router;

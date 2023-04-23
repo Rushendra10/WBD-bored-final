@@ -53,6 +53,8 @@
                   <li><a class="dropdown-item" href="register">Sign up</a></li>
                   <li><a class="dropdown-item" href="login">Login</a></li>
                   <li><a class="dropdown-item" href="post">Create a post</a></li>
+                  <li><a class="dropdown-item" href="userAdmin">User Admin</a></li>
+                  <li><a class="dropdown-item" href="postAdmin">Post Admin</a></li>
                 </ul>
               </li>
             </ul>
@@ -68,13 +70,13 @@
       <p class="description">Feel free to contact us if you need any assistance, any help or another question.
       </p>
       <div>
-        <input type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
+        <input name="uname" type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
       </div>
       <div>
-        <input type="email" class="form-control rounded border-white mb-3 form-input email" placeholder="Email" onblur="validateEmail()">
+        <input name="email" type="email" class="form-control rounded border-white mb-3 form-input email" placeholder="Email" onblur="validateEmail()">
       </div>
       <div>
-        <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" required></textarea>
+        <textarea name="message" id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" required></textarea>
       </div>
       <div class="submit-button-wrapper">
         <button type="submit" class="submit-button">Submit</button>

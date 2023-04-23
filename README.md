@@ -19,5 +19,3 @@
 
 
 #We have used MongoDB Atlas which is a cloud-based database and it has been linked using the connection.js file under the Database folder
-
-Link to github repo: https://github.com/Rushendra10/bored-1

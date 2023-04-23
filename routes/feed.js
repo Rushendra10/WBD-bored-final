@@ -3,6 +3,23 @@ const express = require("express");
 const Post = require("../Models/Post");
 const router = express.Router();
 
+
+/**
+ * @swagger
+ * /feed:
+ *   get:
+ *     summary: Gets all the posts of the specific category that the user has chosen
+ *     responses:
+ *       200:
+ *         description: The list of the books
+ *         content:
+ *           application/json:
+ *             schema:  
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Post'
+ */
+    
 router.get("/feed", async (req, res) =>{
 
     if (req.session.loggeduser==undefined){
@@ -19,10 +36,11 @@ router.get("/feed", async (req, res) =>{
         // res.sendFile(path.join(__dirname, '..', 'views', 'feed1.html'));
 
     }
-
-
+    
     console.log("haha");
 });
+
+
 
 
 router.post("/feed", async (req, res) => {

@@ -1,4 +1,3 @@
-
 const express = require('express');
 
 const path = require('path');
@@ -33,6 +32,8 @@ const deletePost = require("./routes/deletePost");
 
 const deleteUser = require("./routes/deleteUser");
 
+const oopsRoutes = require("./routes/oops")
+
 const app = express();
 
 const db = require("./Database/connection");
@@ -40,11 +41,47 @@ const db = require("./Database/connection");
 const bodyParser = require('body-parser');
 const { ppid } = require('process');
 
+const morgan  = require('morgan');
+
+const fs = require('fs');
+
+const helmet = require('helmet');
+
+const swaggerUI = require('swagger-ui-express');
+
+const swaggerJSDoc = require('swagger-jsdoc');
+
+
 
 // ------------------------------------------------------- //
 
+const options = {
+	definition: {
+		openapi: "3.0.0",
+		info: {
+			title: "bored API",
+			version: "1.0.0",
+			description: "A simple Express Blogging API",
+		},
+		servers: [
+			{
+				url: "http://localhost:3000",
+			},
+		],
+	},
+	apis: ["./routes/*.js"],
+};
+
+const specs = swaggerJSDoc(options);
+
 
 // ------------------------------------------------------- //
+
+// app.use(helmet());
+
+app.use(morgan('common', {
+    stream: fs.createWriteStream('./access.log', {flags: 'a'})
+}));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -92,6 +129,11 @@ app.use(deletePost);
 
 app.use(deleteUser);
 
+app.use(oopsRoutes);
+
+
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+
 
 // app.use(express.cookieParser());
 
@@ -99,6 +141,13 @@ app.use(deleteUser);
 //     res.sendFile(path.join(__dirname, "views", "index.html"));
    
 // });
+
+
+
+
+
+
+
 module.exports = app;
 
 var postModel = require('./Models/Post');

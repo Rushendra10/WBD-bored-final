@@ -8,6 +8,51 @@ const Post = require("../Models/Post");
 const { redirect } = require("express/lib/response");
 const { equal } = require("assert");
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Post:
+ *       type: object
+ *       required:
+ *         - username
+ *         - name
+ *         - email
+ *         - age
+ *         - gender
+ *         - password
+ *         - profilePicture
+ *         - bio
+ *
+ *        
+ *       properties:
+ *         postDate:
+ *           type: string
+ *           description: This will denote the time/date on which the post was creaed
+ *         postCategory:
+ *           type: string
+ *           description: This will be the category to which the post belongs
+ *         postTitle:
+ *           type: string
+ *           description: This will be the header of the title
+ *         postContent:
+ *           type: Number
+ *           description: This field will contain the content of the post
+ *         postImg:
+ *           type: string
+ *           description: The name of the picture (unique) that is made for the post
+ *         newcategoryname:
+ *           type: string
+ *           description: Specified if this post is the first post of a new category
+ *         newcategoryImg:
+ *           type: string
+ *           description: Image of the category (only newcategoryname is other)
+ * 
+ * 
+ *    
+ */
+
 const multer = require("multer");
 
 const storage = multer.diskStorage({

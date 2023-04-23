@@ -2,7 +2,10 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 
-const User = require("../Models/User");
+const {editUser} = require('../controllers/userActions');
+
+
+    
 
 router.get("/edit", (req, res) =>{
 
@@ -17,37 +20,22 @@ router.get("/edit", (req, res) =>{
     }
 });
 
-router.post("/edit", (req, res) =>{
+/**
+ * @swagger
+ * /edit:
+ *   post:
+ *     summary: This will will send the new details of the users that will replace the old details
+ *     responses:
+ *       200:
+ *         description: The user informations has been updated
+ *         content:
+ *           application/json:
+ *             schema:  
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/User'
+ */
 
-    user = req.session.loggeduser;
-
-    console.log(req.body.email);
-
-    // user.age = req.body.age;
-
-    // user.email = req.body.email;
-
-    // user.password = req.body.password;
-
-    // user.bio = req.body.bio;
-
-    User.findOneAndUpdate(
-
-        {
-            username: req.session.loggeduser.username
-        },
-
-        {
-            age: req.body.age,
-            email: req.body.email,
-            password: req.body.password,
-            bio: req.body.bio
-        }
-    )
-    
-    
-    res.redirect("/");
-   
-});
+router.post("/edit", editUser);
 
 module.exports = router;

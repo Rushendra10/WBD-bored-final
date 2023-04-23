@@ -2,6 +2,58 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 
+const {login, register}= require('../controllers/login')
+
+
+
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       required:
+ *         - username
+ *         - name
+ *         - email
+ *         - age
+ *         - gender
+ *         - password
+ *         - profilePicture
+ *         - bio
+ *
+ *        
+ *       properties:
+ *         username:
+ *           type: string
+ *           description: This will be a unique identifier for each user within the application. 
+ *         name:
+ *           type: string
+ *           description: Name of the user
+ *         email:
+ *           type: string
+ *           description: This will be the email address used to register the user and will be unique for every user.
+ *         age:
+ *           type: Number
+ *           description: Age of the user
+ *         gender:
+ *           type: string
+ *           description: User's gender
+ *         password:
+ *           type: string
+ *           description: User account's password.
+ *         profilePicture:
+ *           type: string
+ *           description: Name of the user's profile picture. The actual picture is stored in the local storage.
+ *         bio:
+ *           type: string
+ *           description: A short description of the user
+ * 
+ * 
+ *    
+ */
+
 
 //----------------------------------------------
 
@@ -29,90 +81,33 @@ const upload = multer({ storage: storage });
 const User = require("../Models/User");
 const { redirect } = require("express/lib/response");
 
+
+
 router.get("/login", (req, res) => {
 
     res.render("login");
 });
 
-router.post("/login", (req, res) => {
+/**
+ * @swagger
+ * /login:
+ *   post:
+ *     summary: Gets the information that the user has has input when registering
+ *     responses:
+ *       200:
+ *         description: The specific user has been found
+ *         content:
+ *           application/json:
+ *             schema:  
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/User'
+ */
 
-    User.findUserByEmail(req.body.email, (docs) => {
+router.post("/login", login);
 
-        if (docs===null){
-            
-            res.redirect("/login");
-        }
 
-        else {
-
-            if (docs.password===req.body.password){
-
-                // req.session.loggeduser=req.body.email;
-
-                req.session.loggeduser=docs;
-
-                console.log(req.body.email);
-
-                console.log("Logged in");
-
-                // console.log(docs);
-
-                // res.render("index", {user: req.session.loggeduser});
-                res.redirect("/");
-            }
-
-            else {
-
-                res.redirect("/login");
-
-            }
-        }
-    })
-    
-});
-
-router.post("/register", upload.single("pfpicture"), (req, res) => {
-
-    // console.log(req.body);
-
-    let newUser = new User({profilePicture: req.file.filename , name: req.body.name, username: req.body.username, email: req.body.email, age: req.body.age, gender: req.body.gender, bio:req.body.bio ,password: req.body.password, });
-
-    User.findOne({username: req.body.username, email: req.body.email}, (err, docs) => {
-
-        if (docs==null){
-
-            User.findOne({email: req.body.email}, (err, docs) => {
-
-                if (docs==null){
-
-                    User.saveUser(newUser);
-
-                    res.redirect("/")
-                }
-
-                else {
-
-                    res.redirect("/register");
-                }
-            })
-
-            // console.log(docs);
-
-            // console.log("in the if");
-
-            // User.saveUser(newUser);
-        }
-
-        else {
-            
-            res.redirect("/register");
-
-        }
-    }) 
-
-    // console.log(newUser);
-
-});
+router.post("/register", upload.single("pfpicture"), register);
 
 router.get("/register", (req, res) => {
 

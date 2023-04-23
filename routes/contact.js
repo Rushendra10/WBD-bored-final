@@ -2,6 +2,9 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 
+const sendMail = require('../controllers/sendMail');
+
+
 router.get("/contact", (req, res) =>{
 
     if (req.session.loggeduser==undefined){
@@ -15,9 +18,6 @@ router.get("/contact", (req, res) =>{
    
 });
 
-router.post("/contact", (req, res) => {
-
-    res.redirect("/");
-});
+router.post("/contact", sendMail);
 
 module.exports = router;
