@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
-          node-version: 16
+          node-version: 12
       - name: backend dependencies
         run: |
           npm ci
