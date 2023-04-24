@@ -20,6 +20,6 @@
 
 #We have used MongoDB Atlas which is a cloud-based database and it has been linked using the connection.js file under the Database folder
 
-#Link to the github for backend: https://github.com/Rushendra10/WBD-bored-api-final.git
-#Link to github for frontend: https://github.com/Rushendra10/WBD-bored-final.git
-#Deployed website: https://bored-rushendra.onrender.com/
+#Link to the github for backend: https://github.com/Rushendra10/WBD-bored-api-final.git >
+#Link to github for frontend: https://github.com/Rushendra10/WBD-bored-final.git >
+#Deployed website: https://bored-rushendra.onrender.com/ >
