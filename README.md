@@ -24,4 +24,4 @@
 >
 #Link to github for frontend: https://github.com/Rushendra10/WBD-bored-final.git
 >
-#Deployed website: https://bored-rushendra.onrender.com/ >
+#Deployed website: https://bored-rushendra.onrender.com/ 
