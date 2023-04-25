@@ -47,5 +47,30 @@ describe('Feed Page API', () => {
             })
         })
     })
+
+    describe("GET request", () => {
+
+        it("RShould return the user who is logged in", (done)=> {
+
+            chai.request(server).get("/profile").end((err, response) => {
+
+                response.should.have.status(200);
+                done();
+            })
+        })
+    })
+
+    describe("GET request", () => {
+
+        it("Returns the individual post that the user clicked on:", (done)=> {
+
+            chai.request(server).get("/story").end((err, response) => {
+
+                response.should.have.status(200);
+                done();
+            })
+        })
+    })
+
 })
 
