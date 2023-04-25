@@ -56,7 +56,7 @@ const getPost = async (req, res) =>{
 
 const deletePost = async (req, res) =>{
 
-    console.log(req.body);
+    // console.log(req.body);
    
     await Post.deleteOne({postImg: req.body.postid}, (err, docs) => {
 

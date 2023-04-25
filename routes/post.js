@@ -65,7 +65,7 @@ const storage = multer.diskStorage({
 
     filename: (req, file, cb) => {
 
-        console.log(file)
+        // console.log(file)
 
         cb(null, Date.now() + path.extname(file.originalname))
     }
@@ -86,7 +86,7 @@ router.get("/post", async (req, res) =>{
 
             if (docs!=null){
 
-                console.log(docs);
+                // console.log(docs);
 
                 res.render("post", {user:req.session.loggeduser, cats: docs})
             }
@@ -109,7 +109,7 @@ router.get("/post", async (req, res) =>{
         name: 'newcategorypic', maxCount: 1
       }]), function(req, res, next){
 
-    console.log(req.files);
+    // console.log(req.files);
     // console.log(req.files.length);
 
     // console.log(req.body.postimage);
@@ -165,7 +165,7 @@ router.get("/post", async (req, res) =>{
 
     Post.savePost(newPost);
 
-    console.log(newPost);
+    // console.log(newPost);
 
     // res.render("index", {user: req.session.loggeduser});
 

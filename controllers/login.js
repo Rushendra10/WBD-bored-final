@@ -87,9 +87,9 @@ const login = (req, res) => {
 
                 req.session.loggeduser=docs;
 
-                console.log(req.body.email);
+                // console.log(req.body.email);
 
-                console.log("Logged in");
+                // console.log("Logged in");
 
                 // console.log(docs);
 

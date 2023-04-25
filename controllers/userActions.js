@@ -13,7 +13,7 @@ const deleteUser = async (req, res) =>{
 
 const editUser = async (req, res) =>{
 
-    console.log(req.body.email);
+    // console.log(req.body.email);
 
     // user.age = req.body.age;
 
@@ -23,8 +23,8 @@ const editUser = async (req, res) =>{
 
     // user.bio = req.body.bio;
 
-    console.log()
-    console.log(req.body.age);
+    // console.log()
+    // console.log(req.body.age);
 
     await User.findOneAndUpdate(
 
