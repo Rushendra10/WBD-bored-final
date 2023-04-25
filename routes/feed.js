@@ -45,7 +45,7 @@ router.get("/feed", async (req, res) =>{
 
 
 
-// const redisClient = redis.createClient("redis://red-ch3fcrceoogsn02sg3b0:6379")
+// const redisClient = redis.createClient("redis://red-ch3getcs3fvkjtvver70:6379")
 const redisClient = redis.createClient()
 
 router.post("/feed", async (req, res) => {
