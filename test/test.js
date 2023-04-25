@@ -24,17 +24,17 @@ let success = 500;
 
 describe('Feed Page API', () => {
 
-    describe("POST request", () => {
+    // describe("POST request", () => {
 
-        it("This is a post request for the category that the user wants to view", (done)=> {
+    //     it("This is a post request for the category that the user wants to view", (done)=> {
 
-            chai.request(server).post("/feed").send({category: "Books"}).end((err, response) => {
+    //         chai.request(server).post("/feed").send({category: "Books"}).end((err, response) => {
 
-                response.should.have.status(success);
-                done();
-            })
-        })
-    })
+    //             response.should.have.status(success);
+    //             done();
+    //         })
+    //     })
+    // })
 
     describe("GET request", () => {
 

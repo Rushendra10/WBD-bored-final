@@ -32,7 +32,9 @@ const deletePost = require("./routes/deletePost");
 
 const deleteUser = require("./routes/deleteUser");
 
-const oopsRoutes = require("./routes/oops")
+const oopsRoutes = require("./routes/oops");
+
+const searchRoutes = require('./routes/search');
 
 const app = express();
 
@@ -130,6 +132,8 @@ app.use(deletePost);
 app.use(deleteUser);
 
 app.use(oopsRoutes);
+
+app.use(searchRoutes);
 
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
